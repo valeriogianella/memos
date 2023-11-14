@@ -50,7 +50,11 @@ docker-compose up -d
 ````
 docker-compose down
 ````
-### Run commands <command> in docker
+### Run commands <command> in docker using the service <service> (specified in the **Dockerfile**)
 ````
-docker-compose exec web python manage.py <command>
+docker-compose exec <service> python manage.py <command>
+````
+e.g.
+````
+docker-compose exec web python manage.py runserver
 ````
